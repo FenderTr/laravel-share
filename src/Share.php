@@ -105,6 +105,20 @@ class Share
     }
 
     /**
+     * Vkontakte share link
+     *
+     * @return $this
+     */
+    public function vkontakte()
+    {
+        $url = config('laravel-share.services.vkontakte.uri') . $this->url;
+
+        $this->buildLink('vkontakte', $url);
+
+        return $this;
+    }
+
+    /**
      * Facebook share link
      *
      * @return $this
